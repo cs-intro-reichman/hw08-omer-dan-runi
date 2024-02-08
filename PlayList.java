@@ -36,7 +36,7 @@ class PlayList {
      *  Otherwise, appends the track and returns true. */
     public boolean add(Track track)
     {
-        if (tracks.length == maxSize)
+        if (getSize() == getMaxSize())
         {
             return false;
         }
