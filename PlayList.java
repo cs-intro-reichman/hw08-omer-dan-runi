@@ -103,7 +103,7 @@ class PlayList {
             return false;
         }
 
-        Track nextTrack = tracks[i];
+        Track nextTrack = tracks[i+1];
         for (int increment = i; increment < size; increment++)
         {
             tracks[increment] = nextTrack;
@@ -112,7 +112,7 @@ class PlayList {
         tracks[i] = track;
         size ++;
 
-        return false;
+        return true;
     }
      
     /** Removes the track in the given index from this list.
