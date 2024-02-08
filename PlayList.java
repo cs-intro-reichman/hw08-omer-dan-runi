@@ -129,7 +129,7 @@ class PlayList {
         {
             tracks[j] = tracks[j - 1];
         }
-        remove(size - 1);
+        size--;
     }
 
     /** Removes the first track that has the given title from this list.
