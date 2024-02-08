@@ -103,11 +103,14 @@ class PlayList {
             return false;
         }
 
-        Track nextTrack = tracks[i+1];
-        for (int increment = i; increment < size; increment++)
+        Track prevTrack = tracks[i];
+        Track nextTrack = null;
+
+        for (int increment = i + 1; increment <= size; increment++)
         {
-            tracks[increment] = nextTrack;
-            nextTrack = tracks[increment + 1];
+            nextTrack = tracks[increment];
+            tracks[increment] = prevTrack;
+            prevTrack = nextTrack;
         }
         tracks[i] = track;
         size ++;
